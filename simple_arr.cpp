@@ -10,6 +10,7 @@ void biggest(vector<int> &arr, int len);
 void unical(vector<int> &arr, int len);
 int factorial(int num);
 void factorials(vector<int> &arr, int len);
+void sum(vector<int> &arr, int len);
 
 int main(){
     vector<int> arr;
@@ -18,9 +19,10 @@ int main(){
     bubble_sort(arr, len);
     smallest(arr, len);
     biggest(arr, len);
+    sum(arr, len);
     unical(arr,len);
     factorials(arr, len);
-
+    
     return 0;
 }
 
@@ -66,8 +68,7 @@ void smallest(vector<int> &arr, int len){
             smallest = arr[i];
         }
     }
-    cout << "Smallest: " << smallest;
-    cout << endl;
+    cout << "Smallest: " << smallest << endl;
 }
 
 void biggest(vector<int> &arr, int len){
@@ -77,7 +78,7 @@ void biggest(vector<int> &arr, int len){
             biggest = arr[i];
         }
     }
-    cout << "Biggest: " << biggest;
+    cout << "Biggest: " << biggest << endl;
 }
 
 void unical(vector<int> &arr, int len){
@@ -90,6 +91,14 @@ void unical(vector<int> &arr, int len){
         }
     }
     print_arr(unicals, unicals.size());
+}
+
+void sum(vector<int> &arr, int len){
+    int sum;
+    for(int i = 0; i < len; i++){
+        sum += arr[i];
+    }
+    cout << "Sum: " << sum;
 }
 
 int factorial(int num){
@@ -108,3 +117,4 @@ void factorials(vector<int> &arr, int len){
     cout << "Factorials: ";
     print_arr(factorials, len);
 }
+

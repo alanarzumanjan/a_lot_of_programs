@@ -1,4 +1,4 @@
-TARGET = multitude
+TARGET = simple_arr
 SRC_FILE = $(TARGET).cpp
 
 CC = g++
