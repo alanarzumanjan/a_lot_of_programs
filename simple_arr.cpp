@@ -11,6 +11,8 @@ void unical(vector<int> &arr, int len);
 int factorial(int num);
 void factorials(vector<int> &arr, int len);
 void sum(vector<int> &arr, int len);
+void find_number(vector<int> &arr, int len);
+void average_in_array(vector<int> &arr, int len);
 
 int main(){
     vector<int> arr;
@@ -20,9 +22,10 @@ int main(){
     smallest(arr, len);
     biggest(arr, len);
     sum(arr, len);
+    find_number(arr, len);
     unical(arr,len);
     factorials(arr, len);
-    
+    average_in_array(arr, len);
     return 0;
 }
 
@@ -34,6 +37,7 @@ void set_input(vector<int> &arr){
     }
     cin.clear(); 
     cin.ignore(); 
+    cout << endl;
 }
 
 void print_arr(vector<int> &arr, int len){
@@ -94,7 +98,7 @@ void unical(vector<int> &arr, int len){
 }
 
 void sum(vector<int> &arr, int len){
-    int sum;
+    int sum = 0;
     for(int i = 0; i < len; i++){
         sum += arr[i];
     }
@@ -118,3 +122,29 @@ void factorials(vector<int> &arr, int len){
     print_arr(factorials, len);
 }
 
+void find_number(vector<int> &arr, int len){
+    int find;
+    cout << endl << "Enter number from array to search: ";
+    cin >> find;
+    short position = -1;
+
+    for(int i = 0; i < len; i++){
+        if(arr[i] == find){
+            position = i + 1;
+            break;
+        }
+    }
+    if(position != -1){
+        cout << "Number '" << find << "' position is - " << position;
+    } else{
+      cout << "Number '" << find << "' is not found.";
+    }
+}
+
+void average_in_array(vector<int> &arr, int len){
+    int average = 0;
+    for(int i = 0; i < len; i++){
+
+    }
+    cout << "Average: " << average << endl;
+}
