@@ -13,6 +13,7 @@ void factorials(vector<int> &arr, int len);
 void sum(vector<int> &arr, int len);
 void find_number(vector<int> &arr, int len);
 void average_in_array(vector<int> &arr, int len);
+void even_and_odd(vector<int> &arr, int len);
 
 int main(){
     vector<int> arr;
@@ -22,10 +23,11 @@ int main(){
     smallest(arr, len);
     biggest(arr, len);
     sum(arr, len);
-    find_number(arr, len);
     unical(arr,len);
-    factorials(arr, len);
     average_in_array(arr, len);
+    even_and_odd(arr, len);
+    find_number(arr, len);
+    factorials(arr, len);
     return 0;
 }
 
@@ -48,7 +50,6 @@ void print_arr(vector<int> &arr, int len){
             cout << arr[i] << ", ";
         }
     }
-    cout << endl;
 }
 
 void bubble_sort(vector<int> &arr, int len){
@@ -72,7 +73,7 @@ void smallest(vector<int> &arr, int len){
             smallest = arr[i];
         }
     }
-    cout << "Smallest: " << smallest << endl;
+    cout << endl << "Smallest: " << smallest << endl;
 }
 
 void biggest(vector<int> &arr, int len){
@@ -88,12 +89,18 @@ void biggest(vector<int> &arr, int len){
 void unical(vector<int> &arr, int len){
     vector<int> unicals;
     for(int i = 0; i < len; i++){
+        bool isUnique = true;
         for(int j = 0; j < unicals.size(); j++){
-            if(unicals[j] != arr[i]){
-                unicals.push_back(arr[i]);
+            if(unicals[j] == arr[i]){
+                isUnique = false;
+                break;
             }
         }
+        if(isUnique){
+            unicals.push_back(arr[i]);
+        }
     }
+    cout << endl << "Unique: ";
     print_arr(unicals, unicals.size());
 }
 
@@ -118,8 +125,9 @@ void factorials(vector<int> &arr, int len){
     for(int i = 0; i < len; i++){
         factorials[i] = factorial(arr[i]);
     }
-    cout << "Factorials: ";
+    cout << endl << "Factorials: ";
     print_arr(factorials, len);
+    cout << endl;
 }
 
 void find_number(vector<int> &arr, int len){
@@ -135,16 +143,34 @@ void find_number(vector<int> &arr, int len){
         }
     }
     if(position != -1){
-        cout << "Number '" << find << "' position is - " << position;
+        cout << "Number '" << find << "' position is - {" << position << "}";
     } else{
       cout << "Number '" << find << "' is not found.";
     }
 }
 
 void average_in_array(vector<int> &arr, int len){
-    int average = 0;
+    int sum = 0;
     for(int i = 0; i < len; i++){
-
+        sum += arr[i];
     }
-    cout << "Average: " << average << endl;
+    cout << endl << "Average: " << sum/len << endl;
+}
+
+void even_and_odd(vector<int> &arr, int len){
+    vector<int> even;
+    vector<int> odd;
+
+    for(int i = 0; i < len; i++){
+        if(arr[i] % 2 == 0){
+            even.push_back(arr[i]);
+        } else {
+            odd.push_back(arr[i]);
+        }
+    }
+
+    cout << "Even: ";
+    print_arr(even, even.size());
+    cout << endl << "Odd: ";
+    print_arr(odd, odd.size());
 }
