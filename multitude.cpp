@@ -18,6 +18,7 @@ int main(){
     all_numbers(A,B);
     substract(A,B);
     add(A,B);
+    
     return 0;
 }
 
@@ -49,7 +50,7 @@ void overall_numbers(vector<int> &A, vector<int> &B){
         }
     }
 
-    cout << "Overall numbers: ";
+    cout << "Overalls: ";
     for(int i = 0; i < Overall.size(); i++){
         cout << Overall[i] << " ";
     }
