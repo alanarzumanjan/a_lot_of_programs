@@ -58,8 +58,16 @@ void overall_numbers(vector<int> &A, vector<int> &B){
 
 void all_numbers(vector<int> &A, vector<int> &B){
     vector<int> all;
-    for(int i=0; i < A.size(); i++){
-        all.push_back(A[i]);
+    for(int j = 0; j < A.size(); j++){
+        bool flag = true;
+        for(int i = 0; i < all.size(); i++){
+            if(A[j] == all[i]){
+                flag = false;
+            }
+        }
+        if(flag){
+            all.push_back(A[j]);
+        }
     }
     
     for(int i = 0; i < B.size(); i++){
