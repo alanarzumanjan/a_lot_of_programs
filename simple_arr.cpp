@@ -14,6 +14,7 @@ void sum(vector<int> &arr, int len);
 void find_number(vector<int> &arr, int len);
 void average_in_array(vector<int> &arr, int len);
 void even_and_odd(vector<int> &arr, int len);
+void cube_arr(vector<int> &arr, int len);
 
 int main(){
     vector<int> arr;
@@ -28,6 +29,7 @@ int main(){
     even_and_odd(arr, len);
     find_number(arr, len);
     factorials(arr, len);
+    cube_arr(arr, len);
     return 0;
 }
 
@@ -173,4 +175,13 @@ void even_and_odd(vector<int> &arr, int len){
     print_arr(even, even.size());
     cout << endl << "Odd: ";
     print_arr(odd, odd.size());
+}
+
+void cube_arr(vector<int> &arr, int len){
+    for(int i = 0; i < len; i++){
+        arr[i] *= arr[i];
+    }
+    cout << "Cubes: ";
+    print_arr(arr, len);
+    cout << endl;
 }
