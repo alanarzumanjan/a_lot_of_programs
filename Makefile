@@ -1,4 +1,4 @@
-TARGET = simple_arr
+TARGET = Simple_StrArr
 SRC_FILE = $(TARGET).cpp
 
 CC = g++
