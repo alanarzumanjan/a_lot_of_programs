@@ -48,7 +48,7 @@ void overall_numbers(vector<int> &A, vector<int> &B){
                 break;
             }
         }
-    }  
+    }
 
     cout << "Overalls: ";
     for(int i = 0; i < Overall.size(); i++){
