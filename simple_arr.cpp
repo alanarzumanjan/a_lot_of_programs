@@ -12,7 +12,7 @@ int factorial(int num);
 void factorials(vector<int> &arr, int len);
 void sum(vector<int> &arr, int len);
 void find_number(vector<int> &arr, int len);
-void average_in_array(vector<int> &arr, int len); 
+void average_in_array(vector<int> &arr, int len);  
 void even_and_odd(vector<int> &arr, int len);
 void cube_arr(vector<int> &arr, int len);
 
