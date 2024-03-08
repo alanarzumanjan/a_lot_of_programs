@@ -17,5 +17,5 @@ clean:
 	
 push:
 	git add .
-	git commit -a -m "update"
+	git commit -a -m "to start - make"
 	git push
