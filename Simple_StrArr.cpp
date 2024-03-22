@@ -7,7 +7,7 @@ void input(string &line);
 void length(int len);
 void CheckThings(string &line, int len);
 void reverse_string(string &line, int len);
-
+void reverse_words(string &line, int len);
 int main()
 {
     cout << "Welcome to Simple string array!" << endl;
@@ -18,6 +18,7 @@ int main()
     length(len);
     CheckThings(line, len);
     reverse_string(line, len);
+    reverse_words(line, len);
     return 0;
 }
 
@@ -108,9 +109,16 @@ void reverse_string(string &line, int len){
 
 void reverse_words(string &line, int len){
     string reverse_words;
-    for(int i = len - 1; i >= 0; i--){
-        if(){
-
+    int words_counter;
+    for(int i = len; i >= 0; i--){
+        if(i == ' ' || i == 0){
+            for(int j = i; j < len; j++){
+                reverse_words += line[j];
+            }
         }
     }
+    // Hello World!
+    // World! Hello
+
+    cout << "Reverse words: " << reverse_words << endl;
 }
