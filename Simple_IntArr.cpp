@@ -15,6 +15,7 @@ void find_number(vector<int> &arr, int len);
 void average_in_array(vector<int> &arr, int len);  
 void even_and_odd(vector<int> &arr, int len);
 void cube_arr(vector<int> &arr, int len);
+void two_biggest_num(vector<int> &arr, int len);
 
 int main(){
     vector<int> arr;
@@ -30,6 +31,7 @@ int main(){
     find_number(arr, len);
     factorials(arr, len);
     cube_arr(arr, len);
+    two_biggest_num(arr, len);
     return 0;
 }
 
@@ -184,4 +186,17 @@ void cube_arr(vector<int> &arr, int len){
     cout << "Cubes: ";
     print_arr(arr, len);
     cout << endl;
+}
+
+void two_biggest_num(vector<int> &arr, int len){
+    int biggest = arr[0];
+    int biggest1 = arr[1];
+    for(int i = 0; i < len; i++){
+        if(biggest < arr[i]){
+            biggest1 = biggest;
+            biggest = arr[i];
+        }
+    
+    }
+    cout << "Two biggest: " << biggest << " , " << biggest1 << endl;
 }
