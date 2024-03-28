@@ -139,7 +139,6 @@ void find_number(vector<int> &arr, int len){
     cout << endl << "Enter number from array to search: ";
     cin >> find;
     short position = -1;
-
     for(int i = 0; i < len; i++){
         if(arr[i] == find){
             position = i + 1;
@@ -164,7 +163,6 @@ void average_in_array(vector<int> &arr, int len){
 void even_and_odd(vector<int> &arr, int len){
     vector<int> even;
     vector<int> odd;
-
     for(int i = 0; i < len; i++){
         if(arr[i] % 2 == 0){
             even.push_back(arr[i]);
@@ -172,7 +170,6 @@ void even_and_odd(vector<int> &arr, int len){
             odd.push_back(arr[i]);
         }
     }
-
     cout << "Even: ";
     print_arr(even, even.size());
     cout << endl << "Odd: ";
@@ -196,7 +193,6 @@ void two_biggest_num(vector<int> &arr, int len){
             biggest1 = biggest;
             biggest = arr[i];
         }
-    
     }
     cout << "Two biggest: " << biggest << " , " << biggest1 << endl;
 }
