@@ -13,11 +13,11 @@ jobs:
     - name: Install build tools
       run: sudo apt-get update && sudo apt-get install -y g++
 
-    - name: Compile array_analyzer.cpp
+    - name: Compile array_analayzer.cpp
       run: |
-        g++ -std=c++17 -o array_analyzer array_analyzer.cpp
+        g++ -std=c++17 -o array_analayzer array_analayzer.cpp
 
     - name: Run the program
       run: |
-        echo -e "5 2 3 5 1 2 9\n3" | ./array_analyzer
+        echo -e "5 2 3 5 1 2 9\n3" | ./array_analayzer
 
