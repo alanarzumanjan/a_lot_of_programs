@@ -40,11 +40,11 @@ A simple string analysis tool that:
 ## 🚀 How to Run
 
 ```bash
-g++ -o multitude multitude.cpp
+make (change in Makeile TARGET) || g++ -o multitude multitude.cpp
 ./multitude
 
-g++ -o Simple_IntArr array_analyzer.cpp
+make (change in Makeile TARGET) || g++ -o Simple_IntArr array_analyzer.cpp
 ./array_analyzer
 
-g++ -o string_analyzer string_analyzer.cpp
+make (change in Makeile TARGET) || g++ -o string_analyzer string_analyzer.cpp
 ./string_analyzer
