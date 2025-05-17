@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
+ 
 void set_input(vector<int> &arr);
 void print_arr(vector<int> &arr, int len);
 void bubble_sort(vector<int> &arr, int len);

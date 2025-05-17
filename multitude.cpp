@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
+ 
 void set_input(vector<int> &A, vector<int> &B);
 void overall_numbers(vector<int> &A, vector<int> &B);
 void all_numbers(vector<int> &A, vector<int> &B);

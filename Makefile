@@ -1,4 +1,4 @@
-TARGET = Simple_IntArr
+TARGET = multitude
 SRC_FILE = $(TARGET).cpp
 
 CC = g++
@@ -14,8 +14,3 @@ run:
 
 clean:
 	rm -f $(TARGET) *.o
-	
-push:
-	git add .
-	git commit -a -m "make"
-	git push

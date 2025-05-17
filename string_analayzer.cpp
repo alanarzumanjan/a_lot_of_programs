@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 using namespace std;
-
+ 
 void input(string &line);
 void length(int len);
 void CheckThings(string &line, int len);
