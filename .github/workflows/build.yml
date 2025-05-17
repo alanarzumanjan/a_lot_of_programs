@@ -1,5 +1,3 @@
-# .github/workflows/build.yml
-
 name: C++ Build and Run
 
 on: [push, pull_request]
@@ -17,8 +15,9 @@ jobs:
 
     - name: Compile array_analyzer.cpp
       run: |
-        g++ -std=c++17 -o app array_analyzer.cpp
+        g++ -std=c++17 -o array_analyzer array_analyzer.cpp
 
     - name: Run the program
       run: |
-        echo "5 2 3 5 1 2 9" | ./array_analayzer
+        echo -e "5 2 3 5 1 2 9\n3" | ./array_analyzer
+
